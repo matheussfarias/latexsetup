@@ -1,0 +1,66 @@
+%Matheus Farias style LaTeX
+
+\makeatletter
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+    \let \footnote \thanks
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize
+        \lineskip .5em%
+        \begin{tabular}[t]{c}%
+        \@author
+        \end{tabular}\par}%
+    \vskip 1em%
+    {\normalsize \@date}%
+    \end{center}%
+    \par
+    \vskip 1.5em}
+\makeatother
+
+\definecolor{lcrimson}{HTML}{FCEEF0}
+\definecolor{crimson}{HTML}{A51C30}
+\definecolor{tiffanyblue}{HTML}{07BEB8}
+\definecolor{trypanblue}{HTML}{3900B3}
+\hypersetup{
+    %linkcolor = crimson,
+    %citecolor = tiffanyblue
+    allcolors = crimson
+}
+
+\renewcommand*{\sectionformat}%
+    {\color{crimson}\S\thesection\enskip}
+\renewcommand*{\subsectionformat}%
+    {\color{crimson}\S\thesubsection\enskip}
+\renewcommand*{\subsubsectionformat}%
+    {\color{crimson}\S\thesubsubsection\enskip}
+
+\theoremstyle{definition} 
+\newmdtheoremenv [
+    outerlinewidth = 2,
+    roundcorner = 20pt,
+    leftmargin = 20,
+    rightmargin = 20,
+    backgroundcolor = lcrimson,
+    outerlinecolor = black,
+    innertopmargin = 0pt,
+    %splittopskip = \topskip,
+    %ntheorem = true,
+    topline = true,
+    bottomline = true,
+    rightline = true,
+    leftline = true] 
+    {example}{Example}[section]
+
+\renewcommand\emph[1]{\textcolor{crimson}{\textbf{#1}}}
+
+\renewcommand{\arraystretch}{1.2} 
+\captionsetup{
+    labelfont = bf,
+    labelsep = period
+}
+
+\linespread{1.08} % Increases by 8% the distance between lines. This makes in-line math look better.

@@ -1,0 +1,71 @@
+\documentclass[abstract=true]{scrartcl}
+%set letterpaper, 10pt for american
+\usepackage{amsmath, amssymb, amsthm} %necessary math packages
+\usepackage{verbatim} %if you need not to interpret latex
+\usepackage{graphicx} %insert figures
+\usepackage{booktabs} %nice tables
+\usepackage[colorlinks]{hyperref} %links
+\usepackage{xcolor} %definecolors
+\usepackage{enumerate} %enumerate
+\usepackage{natbib} %bib organization
+\usepackage[affil-it]{authblk} %better maketitle
+\usepackage{mdframed} %frame example
+\usepackage{microtype} %small improvement
+\usepackage{caption} %caption
+\usepackage{style/matheusfarias} %my style
+%\usepackage[body={4.8in,7.5in}, 
+%    top=1.2in, left=1.8in]{geometry} %american page layout
+
+\begin{document}
+\title{Template}
+\date{Fall, 2021}
+
+\author{Matheus S. Farias%
+  \thanks{E-mail address: \href{mailto:matheusfarias@g.harvard.edu}{matheusfarias@g.harvard.edu}}}
+\affil{School of Engineering and Applied Sciences, Harvard University}
+
+\maketitle
+
+\begin{abstract}
+    Here is the abstract with a citation \cite{shannon48}.
+\end{abstract}
+
+\tableofcontents
+
+\section{First Section}
+See Example \ref{ex:ref}.
+\begin{example}
+    First example.
+    \label{ex:ref}
+\end{example}
+
+This is an \emph{example} of emphasize and here a \textbf{bold text}.
+
+\subsection{First Subsection}
+
+Table \ref{tab:ref} is the first one.
+\begin{table}[h]
+    \centering
+    \caption{\label{tab:ref}First table.}
+    \vspace{5pt}
+    \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Quadrant}    & $\mathbf{5}$ \textbf{m}    & $\mathbf{10}$ \textbf{m}    \\
+    \midrule
+    Quadrant I  & $8.63\%$ & $9.11\%$ \\
+    Quadrant II & $5.63\%$ & $7.77\%$   \\ 
+    \bottomrule
+\end{tabular}
+\end{table}
+
+Figure \ref{fig:ref} is the first one.
+\begin{figure}
+    \centering
+    \includegraphics[width = \textwidth]{logo.pdf}
+    \caption{First figure.}
+    \label{fig:ref}
+\end{figure}
+
+\bibliographystyle{apalike}
+\bibliography{bib/mybib.bib} %my bib
+\end{document}
