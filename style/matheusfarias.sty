@@ -55,6 +55,23 @@
     leftline = true] 
     {example}{Example}[section]
 
+    \newmdtheoremenv [
+        outerlinewidth = 2,
+        roundcorner = 20pt,
+        leftmargin = 20,
+        rightmargin = 20,
+        backgroundcolor = lcrimson,
+        outerlinecolor = black,
+        innertopmargin = 0pt,
+        %splittopskip = \topskip,
+        %ntheorem = true,
+        topline = true,
+        bottomline = true,
+        rightline = true,
+        leftline = true] 
+        {definition}{Definition}[section]
+    
+
 \renewcommand\emph[1]{\textcolor{crimson}{\textbf{#1}}}
 
 \renewcommand{\arraystretch}{1.2} 
@@ -62,5 +79,5 @@
     labelfont = bf,
     labelsep = period
 }
-
+%\renewcommand{\sfdefault}{ppl} % uncomment if want palantino
 \linespread{1.08} % Increases by 8% the distance between lines. This makes in-line math look better.

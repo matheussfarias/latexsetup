@@ -1,0 +1,176 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{newpxtext}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=crimson]{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable}
+\usepackage{etaremune}
+\definecolor{crimson}{HTML}{A51C30}
+
+
+%Setting the font I want:
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{ppl}
+
+%Defining the entry command:
+\newcommand{\entry}[4]{
+
+\begin{minipage}[t]{.15\textwidth}
+\end{minipage}
+\hfill\vline\hfill 
+\begin{minipage}[t]{0.95\textwidth}
+#2 \hfill \textsc{#1}
+
+\textit{#3}
+
+\footnotesize{#4}
+\end{minipage}\\\vspace{.25cm}}
+
+\newcommand{\we}[5]{
+
+\begin{minipage}[t]{.15\textwidth}
+\end{minipage}
+\hfill\vline\hfill 
+\begin{minipage}[t]{0.95\textwidth}
+#2 \hfill \textbf{#5}
+
+\textit{#3} \hfill \textsc{#1}
+
+\footnotesize{#4}
+\end{minipage}\\\vspace{.25cm}}
+
+%Some macros because I'm lazy:
+\newcommand{\harv}{Harvard University}
+\newcommand{\ufpe}{Federal University of Pernambuco}
+\newcommand{\co}{\textcolor{crimson}{*}}
+
+%Section spacing and format:
+\titleformat{\section}{\Large\scshape\raggedright}{}{1em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\titleformat{\subsection}{\large\scshape\raggedright}{}{1em}{}
+\titlespacing{\subsection}{0pt}{3pt}{3pt}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\par{\centering{\Huge Matheus Sobreira Farias}\par}
+\par{\centering {\href{mailto:matheusfarias@g.harvard.edu}{matheusfarias@g.harvard.edu} | \href{https://www.cin.ufpe.br/~msf4}{https://www.cin.ufpe.br/\textasciitilde msf4}}\par}
+
+\vspace{.25cm}
+
+\section{Education}
+
+\we{2021--present}{\textbf{\harv}}{Ph.D. in Electrical Engineering}{Focusing on machine learning, IoT and hardware design.}{Cambridge, MA}
+\we{2016--2021}{\textbf{\ufpe}}{B.Sc. in Electronics Engineering}{
+	1st out of 40 students, GPA 8.90/10. Senior Thesis: \textit{iOwlT: Sound Geolocalization System} (\href{https://www.cin.ufpe.br/~msf4/assets/files/SeniorThesis.pdf}{link}).
+	}{Recife, Brazil}
+
+\section{Research}
+
+Current projects and other information can be found \href{https://www.cin.ufpe.br/~msf4/}{here}.
+
+\vspace{.25cm}
+
+\entry{2019-2020}{\textbf{iOwlT: Sound Geolocalization System} (\href{https://www.cin.ufpe.br/~msf4/iowlt.html}{link})}{\ufpe}{
+	Developed a system using neural networks, adaptive filtering and real-time processing in FPGAs to geographically track sound events and then determine the position of gun shooters on a mobile application by Bluetooth connection. Earned 3 international awards, placing Top 0.7\% at InnovateFPGA competition in China.
+	}
+
+\entry{2019-2020}{\textbf{Lock-in: Nano-Volt Signal Amplifier} (\href{https://www.cin.ufpe.br/~msf4/lockin.html}{link})}{\ufpe}{
+	Design and optimization of a phase-sensitive lock-in amplifier circuit for the Magnetism and Magnetic Materials' group led by the former Minister of Science and Technology of Brazil Prof.\ Dr.\ Sergio Rezende to be used for investigating magnetic properties of thin films such as IrMn/Py using MOKE technique.
+}
+
+\entry{2017}{\textbf{iTraffic: Smart Semaphore Network} (\href{https://www.cin.ufpe.br/~msf4/itraffic.html}{link})}{\ufpe}{
+	Design and proposal of an internet of things intelligent system to dynamically choose traffic lights timing to optimize vehicle flow on urban roads using genetic algorithm. Achieved 130\% improvement in the average speed of cars in tested tracks.
+}
+
+\entry{2017}{\textbf{Maracatronics: Robotics Team} (\href{https://www.cin.ufpe.br/~msf4/maracatronics.html}{link})}{\ufpe}{
+	Part of collective autonomous soccer sub-team, acting on robots control on Tiva-C microcontroller, computer vision mapping and tracking, and intelligent robots decision-making strategies.
+}
+
+\section{Publications}
+\co denotes equal contribution
+
+%\subsection{Journal}
+\begin{etaremune}
+	\renewcommand{\labelenumi}{[J\theenumi]}
+	\item \textbf{M. S. Farias}\co , D. M. de Almeida\co , D. de F. Gomes, and E. N. Barros, “Optimization of Hardware Parameters on a Real-Time Sound Localization System”, submitted to \textit{Expert Systems with Applications}.
+\end{etaremune}\vspace{.25cm}
+
+\section{Conferences}
+
+\begin{etaremune}
+	\item \textbf{2019 International Conference on Field-Programmable Technology}
+	\hfill{Tianjin, China}
+	\item \textbf{VII Brazilian Symposium on Computing Systems Engineering}
+	\hfill{Curitiba, Brazil}
+	\end{etaremune}
+
+\section{Teaching}
+
+\entry{Fall 2020}{ES456 -- \textbf{Machine Learning} -- Teaching Assistant}{\ufpe}{
+	I conducted my own activities and lectures off of my own syllabus. Helped the students developing projects and graded work.
+	}
+
+\entry{2018-2019}{MA326 -- \textbf{Complex Variables and Applications} -- Teaching Assistant}{\ufpe}{
+	I taught once-a-week sessions to support students in their assignments.
+	}
+
+\entry{2017-2018}{FI007 -- \textbf{Physics II: Gravitation, Waves and Thermodynamics} -- Teaching Assistant}{\ufpe}{
+	I wrote some extra assignments for students interested in Olympic-level Physics, as well as once-a-week sessions to discuss.
+	}
+
+\entry{Fall 2016}{MA026 -- \textbf{Calculus I: Limits, Derivatives and Integrals} -- Teaching Assistant}{\ufpe}{
+	I taught once-a-week sessions to support students in their assignments.
+	}
+
+
+\section{Work Experience}
+
+\we{2020--2021}{\textbf{Neurotech}}{Machine Learning Intern}{
+	Served as workshop instructor and collaborated adding +5 machine learning algorithms to production.
+	}{Recife, Brazil}
+\we{2016--2018}{\textbf{Espaço Diferencial}}{Co-Founder and Professor}{
+	Idealized the course, a non-profit school to support underpriviledge students in basic engineering classes. Managed the action strategy planning that turned to impact over 200 students with a team of 10 professors. Taught Physics at the undergraduate level.
+	}{Recife, Brazil}
+	
+
+\section{Awards and Recognitions}
+
+\entry{2019}{\textbf{Silver Award at InnovateFPGA 2019 Contest} (\textit{Grand Finals})}{Tianjin, China}{
+	2nd out of 270 teams with iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{Silver Award at InnovateFPGA 2019 Contest} (\textit{Regional Finals})}{Americas}{
+	2nd out of 40 teams with iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{Community Award at InnovateFPGA 2019 Contest}}{Americas}{
+	Elected as best project by the community with iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{PIBIC/CNPq funding to do research}}{Brazil}{
+	Awarded by national government funding to do research with Lock-in: Nano-Volt Signal Amplifier.	
+}
+
+\entry{2017}{\textbf{5th Place at XVI Latin American Robotics Competition}}{Latin America}{
+	In the Small Size League category of autonomous football soccer with Maracatronics: Robotics Project.
+}
+
+\entry{2017}{\textbf{1st Place at Embedded Systems Regional Contest}}{Brazil}{
+	1st out of 14 teams with iTraffic: Smart Semaphore Network.
+}
+
+\entry{2015}{\textbf{Honorable Mention at Brazilian Physics Olympiad}}{Brazil}{
+	One of the 180 medalists over more than 300,000 contestants.
+}
+
+%\section{Other Qualifications}
+%\begin{longtable}{rp{12cm}}
+%\textsc{Languages:}&\textbf{Native} Portuguese, \textbf{Advanced} English\\
+%\textsc{Softwares:}&Tensorflow, scikit, OpenCV, Quartus, Matlab, KiCAD, Origin, Adobe Photoshop, Illustrator, \LaTeX\\	
+%\end{longtable}
+
+\end{document}
