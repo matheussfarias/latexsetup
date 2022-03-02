@@ -4,9 +4,10 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[colorlinks=true,urlcolor=crimson]{hyperref}
 \usepackage{titlesec}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=.75in]{geometry}
 \usepackage{longtable}
 \usepackage{etaremune}
+\usepackage{enumitem}
 \definecolor{crimson}{HTML}{A51C30}
 
 
@@ -46,6 +47,8 @@
 \newcommand{\ufpe}{Federal University of Pernambuco}
 \newcommand{\co}{\textcolor{crimson}{*}}
 
+\newcommand{\mycomment}[1]{}
+
 %Section spacing and format:
 \titleformat{\section}{\Large\scshape\raggedright}{}{1em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
@@ -55,38 +58,42 @@
 \begin{document}
 
 \pagenumbering{gobble}
-
 \par{\centering{\Huge Matheus Sobreira Farias}\par}
-\par{\centering {\href{mailto:matheusfarias@g.harvard.edu}{matheusfarias@g.harvard.edu} | \href{https://www.cin.ufpe.br/~msf4}{https://www.cin.ufpe.br/\textasciitilde msf4}}\par}
+\par{\centering{\textit{Room 3.410, Science \& Engineering Complex, 150 Western Ave. Allston, MA 02134}}\par}
+\par{\centering {\href{mailto:matheusfarias@g.harvard.edu}{matheusfarias@g.harvard.edu} | \href{www.matheussfarias.com}{matheussfarias.com}}\par}
 
 \vspace{.25cm}
 
 \section{Education}
 
-\we{2021--present}{\textbf{\harv}}{Ph.D. in Electrical Engineering}{Focusing on machine learning, IoT and hardware design.}{Cambridge, MA}
+\we{2021--Present}{\textbf{\harv}}{Ph.D. in Electrical Engineering}{Working on efficient hardware architectures for machine learning. Advised by Prof.\ H.\ T.\ Kung (\href{https://www.eecs.harvard.edu/htk/}{link})}{Cambridge, MA}
 \we{2016--2021}{\textbf{\ufpe}}{B.Sc. in Electronics Engineering}{
-	1st out of 40 students, GPA 8.90/10. Senior Thesis: \textit{iOwlT: Sound Geolocalization System} (\href{https://www.cin.ufpe.br/~msf4/assets/files/SeniorThesis.pdf}{link}).
+	1st out of 40 students, GPA 8.90/10. Senior Thesis: \textit{iOwlT: Sound Geolocalization System} (\href{https://www.matheussfarias.com/assets/files/SeniorThesis.pdf}{link}).
 	}{Recife, Brazil}
 
 \section{Research}
 
-Current projects and other information can be found \href{https://www.cin.ufpe.br/~msf4/}{here}.
+Current projects and other information can be found \href{https://www.matheussfarias.com/}{here}.
 
 \vspace{.25cm}
 
-\entry{2019-2020}{\textbf{iOwlT: Sound Geolocalization System} (\href{https://www.cin.ufpe.br/~msf4/iowlt.html}{link})}{\ufpe}{
+\entry{2021--Present}{\textbf{Computing in Memory} }{Harvard University}{
+	Working on the algorithmic level perspective to allow efficient deep neural networks under the crossbar architecture. Particularly interested in ways to avoid bottlenecks on the architecture such as energy consumption due to data conversions, wire resistance impact, sneak paths, and negative weight representation.
+	}
+
+\entry{2019--2020}{\textbf{iOwlT: Sound Geolocalization System} (\href{https://www.matheussfarias.com/iowlt.html}{link})}{\ufpe}{
 	Developed a system using neural networks, adaptive filtering and real-time processing in FPGAs to geographically track sound events and then determine the position of gun shooters on a mobile application by Bluetooth connection. Earned 3 international awards, placing Top 0.7\% at InnovateFPGA competition in China.
 	}
 
-\entry{2019-2020}{\textbf{Lock-in: Nano-Volt Signal Amplifier} (\href{https://www.cin.ufpe.br/~msf4/lockin.html}{link})}{\ufpe}{
-	Design and optimization of a phase-sensitive lock-in amplifier circuit for the Magnetism and Magnetic Materials' group led by the former Minister of Science and Technology of Brazil Prof.\ Dr.\ Sergio Rezende to be used for investigating magnetic properties of thin films such as IrMn/Py using MOKE technique.
+\entry{2019--2020}{\textbf{Lock-in: Nano-Volt Signal Amplifier} (\href{https://www.matheussfarias.com/lockin.html}{link})}{\ufpe}{
+	Design and optimization of a phase-sensitive lock-in amplifier circuit for the Magnetism and Magnetic Materials' group led by the former Minister of Science and Technology of Brazil Prof.\ Sergio Rezende to be used for investigating magnetic properties of thin films such as IrMn/Py using MOKE technique.
 }
 
-\entry{2017}{\textbf{iTraffic: Smart Semaphore Network} (\href{https://www.cin.ufpe.br/~msf4/itraffic.html}{link})}{\ufpe}{
+\entry{2017}{\textbf{iTraffic: Smart Semaphore Network} (\href{https://www.matheussfarias.com/itraffic.html}{link})}{\ufpe}{
 	Design and proposal of an internet of things intelligent system to dynamically choose traffic lights timing to optimize vehicle flow on urban roads using genetic algorithm. Achieved 130\% improvement in the average speed of cars in tested tracks.
 }
 
-\entry{2017}{\textbf{Maracatronics: Robotics Team} (\href{https://www.cin.ufpe.br/~msf4/maracatronics.html}{link})}{\ufpe}{
+\entry{2017}{\textbf{Maracatronics: Robotics Team} (\href{https://www.matheussfarias.com/maracatronics.html}{link})}{\ufpe}{
 	Part of collective autonomous soccer sub-team, acting on robots control on Tiva-C microcontroller, computer vision mapping and tracking, and intelligent robots decision-making strategies.
 }
 
@@ -95,8 +102,8 @@ Current projects and other information can be found \href{https://www.cin.ufpe.b
 
 %\subsection{Journal}
 \begin{etaremune}
-	\renewcommand{\labelenumi}{[J\theenumi]}
-	\item \textbf{M. S. Farias}\co , D. M. de Almeida\co , D. de F. Gomes, and E. N. Barros, “Optimization of Hardware Parameters on a Real-Time Sound Localization System”, submitted to \textit{Expert Systems with Applications}.
+	\renewcommand{\labelenumi}{[\theenumi]}
+    \item \textbf{M. S. Farias}\co , H. T. Kung\co, “Sorted Sectioning for Computing in Memory Crossbars: Reducing ADC Cost and Wire Resistance Impact”, submitted to the \textit{International Conference on Supercomputing 2023 (ICS'23)}.
 \end{etaremune}\vspace{.25cm}
 
 \section{Conferences}
@@ -107,25 +114,44 @@ Current projects and other information can be found \href{https://www.cin.ufpe.b
 	\item \textbf{VII Brazilian Symposium on Computing Systems Engineering}
 	\hfill{Curitiba, Brazil}
 	\end{etaremune}
-
+\newpage
 \section{Teaching}
-
-\entry{Fall 2020}{ES456 -- \textbf{Machine Learning} -- Teaching Assistant}{\ufpe}{
-	I conducted my own activities and lectures off of my own syllabus. Helped the students developing projects and graded work.
+\textbf{\harv}
+\vspace{-0.5em}
+\begin{itemize}[label={}]
+    \setlength\itemsep{0.1em}
+    \item CS205 -- \textit{High Performance Computing} \hfill\textsc{Spring 2023}
+\end{itemize}
+\hspace{1.5em}\textbf{\ufpe} 
+\vspace{-0.5em}
+\begin{itemize}[label={}]
+    \setlength\itemsep{0.1em}
+    \item ES456 -- \textit{Machine Learning} \hfill\textsc{Fall 2023}
+    \item MA326 -- \textit{Complex Variables and Applications} \hfill\textsc{2018--2019}
+    \item FI007 -- \textit{Physics II: Gravitation, Waves and Thermodynamics} \hfill\textsc{2017--2018}
+    \item MA026 -- \textit{Calculus I: Limits, Derivatives and Integrals} \hfill\textsc{Fall 2016} 
+\end{itemize}
+\mycomment{
+\entry{Spring 2023}{CS205 -- \textbf{High Performance Computing} -- Teaching Fellow}{\harv}{
+	I led lab activites, held office hours, assisted the teaching staff on grading assignments, and mentored some of the final projects.
 	}
 
-\entry{2018-2019}{MA326 -- \textbf{Complex Variables and Applications} -- Teaching Assistant}{\ufpe}{
+\entry{Fall 2020}{ES456 -- \textbf{Machine Learning} -- Teaching Assistant}{\ufpe}{
+	I conducted my own activities and lectures off of my own syllabus. Supported the students developing projects and graded work.
+	}
+
+\entry{2018--2019}{MA326 -- \textbf{Complex Variables and Applications} -- Teaching Assistant}{\ufpe}{
 	I taught once-a-week sessions to support students in their assignments.
 	}
 
-\entry{2017-2018}{FI007 -- \textbf{Physics II: Gravitation, Waves and Thermodynamics} -- Teaching Assistant}{\ufpe}{
+\entry{2017--2018}{FI007 -- \textbf{Physics II: Gravitation, Waves and Thermodynamics} -- Teaching Assistant}{\ufpe}{
 	I wrote some extra assignments for students interested in Olympic-level Physics, as well as once-a-week sessions to discuss.
 	}
 
 \entry{Fall 2016}{MA026 -- \textbf{Calculus I: Limits, Derivatives and Integrals} -- Teaching Assistant}{\ufpe}{
 	I taught once-a-week sessions to support students in their assignments.
 	}
-
+}
 
 \section{Work Experience}
 
@@ -138,6 +164,10 @@ Current projects and other information can be found \href{https://www.cin.ufpe.b
 	
 
 \section{Awards and Recognitions}
+
+\entry{2021--2022}{\textbf{Behring Foundation Fellowship}}{\harv}{
+	Honored by the Behring Foundation with a fellowship to cover my first year of graduate studies at Harvard.	
+}
 
 \entry{2019}{\textbf{Silver Award at InnovateFPGA 2019 Contest} (\textit{Grand Finals})}{Tianjin, China}{
 	2nd out of 270 teams with iOwlT: Sound Geolocalization System.
@@ -172,5 +202,38 @@ Current projects and other information can be found \href{https://www.cin.ufpe.b
 %\textsc{Languages:}&\textbf{Native} Portuguese, \textbf{Advanced} English\\
 %\textsc{Softwares:}&Tensorflow, scikit, OpenCV, Quartus, Matlab, KiCAD, Origin, Adobe Photoshop, Illustrator, \LaTeX\\	
 %\end{longtable}
+
+%\mycomment{
+\section{Diversity, Inclusion \& Outreach}
+\begin{itemize}
+    \item Author of the Experimental Exam for the Brazilian selective to the International Physics Olympiad
+    \hfill\textsc{2023}
+
+    \item Organizer of the International Young Physicists' Tournament Brazil
+    \hfill\textsc{2023}
+
+    \item Leader of the Diversity \& Inclusion branch at the Harvard Brazilian Association
+	\hfill\textsc{2022--2023}
+
+    \item Judge for the 4th Brazilian Physicists' Tournament
+    \hfill\textsc{2021}
+
+    \item Officer of the School of Engineering and Applied Sciences at the Harvard Brazilian Association
+	\hfill\textsc{2021--2023}
+
+    \item Judge for the International Young Physicists' Tournanment Brazil
+	\hfill\textsc{2021--2023}
+	\end{itemize}
+
+\section{Talks}
+\entry{2023}{\textbf{Futuras Cientistas -- Ministry of Science, Technology \& Innovation of Brazil} (\href{https://www.youtube.com/watch?v=g5Inc6qXO6k&ab_channel=FuturasCientistas}{link})}{Technology and its Social Impact}{
+}
+%}
+
+\entry{2022}{\textbf{\ufpe}}{Journey to become a Ph.D student}{
+}
+
+\entry{2021}{\textbf{PodCast Ph.D nos EUA} (\href{https://open.spotify.com/episode/37Rn34gdy7AxNgHeAvdIH0?si=11bf338624d04113}{part 1}) (\href{https://open.spotify.com/episode/7zYdb51lXeKbfpULOgpQlx?si=d1dbd10b9197486e}{part 2})}{Journey to become a Ph.D student}{
+}
 
 \end{document}
