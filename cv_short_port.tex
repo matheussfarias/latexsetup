@@ -1,0 +1,260 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{newpxtext}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=crimson]{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=.75in]{geometry}
+\usepackage{longtable}
+\usepackage{etaremune}
+\usepackage{enumitem}
+\usepackage[portuguese]{babel}
+\definecolor{crimson}{HTML}{A51C30}
+
+
+%Setting the font I want:
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{ppl}
+
+%Defining the entry command:
+\newcommand{\entry}[4]{
+
+\begin{minipage}[t]{.15\textwidth}
+\end{minipage}
+\hfill\vline\hfill 
+\begin{minipage}[t]{0.95\textwidth}
+#2 \hfill \textsc{#1}
+
+\textit{#3}
+
+\footnotesize{#4}
+\end{minipage}\\\vspace{.25cm}}
+
+\newcommand{\we}[5]{
+
+\begin{minipage}[t]{.15\textwidth}
+\end{minipage}
+\hfill\vline\hfill 
+\begin{minipage}[t]{0.95\textwidth}
+#2 \hfill \textbf{#5}
+
+\textit{#3} \hfill \textsc{#1}
+
+\footnotesize{#4}
+\end{minipage}\\\vspace{.25cm}}
+
+%Some macros because I'm lazy:
+\newcommand{\harv}{Harvard University}
+\newcommand{\ufpe}{Universidade Federal de Pernambuco}
+\newcommand{\co}{\textcolor{crimson}{*}}
+
+\newcommand{\mycomment}[1]{}
+
+%Section spacing and format:
+\titleformat{\section}{\Large\scshape\raggedright}{}{1em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\titleformat{\subsection}{\large\scshape\raggedright}{}{1em}{}
+\titlespacing{\subsection}{0pt}{3pt}{3pt}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\par{\centering{\Huge Matheus Sobreira Farias}\par}
+\par{\centering{\textit{Sala 3.410, Science \& Engineering Complex, 150 Western Ave. Allston, MA 02134}}\par}
+\par{\centering {\href{mailto:matheusfarias@g.harvard.edu}{matheusfarias@g.harvard.edu} | \href{www.matheussfarias.com}{matheussfarias.com}}\par}
+\hfill \textit{Última atualização: \today}
+\vspace{-.25cm}
+
+\section{Educação}
+\vspace*{.1cm}
+\we{2021--Presente}{\textbf{\harv}}{Ph.D. em Engenharia Elétrica}{Trabalhando com arquiteturas eficientes de hardware para machine learning. Orientado por Prof.\ H.\ T.\ Kung (\href{https://www.eecs.harvard.edu/htk/}{link})}{Cambridge, MA}
+\we{2016--2021}{\textbf{\ufpe}}{B.Sc. em Engenharia Eletrônica}{
+	1º de 40 estudantes, Média 8.90/10. Trabalho de Conclusão de Curso: \textit{iOwlT: Sound Geolocalization System} (\href{https://www.matheussfarias.com/assets/files/SeniorThesis.pdf}{link}).
+	}{Recife, Brazil}
+
+\vspace*{-.25cm}
+\section{Pesquisa}
+
+Informações detalhadas podem ser encontradas \href{https://www.matheussfarias.com/}{aqui}.
+
+\vspace{.1cm}
+
+\entry{2021--Presente}{\textbf{Computação na Memória}}{\harv}{
+	Trabalhando a nível de algoritmo para melhorar a efficiência de implementação de redes neurais profundas na arquitetura de crossbar. Particularmente interessado em reduzir gargalos como os de conversão de dados, não-idealidades, tempo de programação e mapeamento de pesos.
+}
+
+\entry{2019--2020}{\textbf{iOwlT: Sound Geolocalization System} (\href{https://www.matheussfarias.com/iowlt.html}{link})}{\ufpe}{
+	Desenvolvi o sistema utilizando redes neurais, filtros adaptativos e processamento em tempo real com FPGAs para reconhecer sons de tiro e determinar a localização de atiradores em uma aplicação mobile. Conquistou 3 premiações internacionais no InnovateFPGA 2019 na China (Top 0.7\%).
+}
+
+\entry{2019--2020}{\textbf{Lock-in: Amplificador de Sinais a Nível Nano} (\href{https://www.matheussfarias.com/lockin.html}{link})}{\ufpe}{
+	Design e otimização de um amplificador lock-in sensível a fase orientado pelo ex-ministro da Ciência e Tecnologia do Brasil Prof. Sergio Rezende para investigar propriedades magnéticas de filmes finos IrMn/Py utilizando técnica MOKE.
+}
+
+\entry{2017}{\textbf{iTraffic: Smart Semaphore Network} (\href{https://www.matheussfarias.com/itraffic.html}{link})}{\ufpe}{
+	Design e proposta de um sistema inteligente de internet das coisas que determina, dinamicamente, a temporização dos semáforos para otimizar fluxo de veículos nas ruas com algoritmos genéticos. Conquistou melhoria de 130\% na velocidade média dos carros nas vias testadas.
+}
+
+\entry{2017}{\textbf{Maracatronics: Time de Robótica} (\href{https://www.matheussfarias.com/maracatronics.html}{link})}{\ufpe}{
+	Membro do sub-time de futebol de robôs autônomo e coletivo, atuando no controle com microcontroladores Tiva-C, mapeamento e rastreio com visão computacional e estratégias inteligentes de decisão. Conquistou 5 lugar na XVI Latin American Robotics Competition.
+}
+
+\vspace*{-.25cm}
+
+\section{Publicações}
+%\co denotes equal contribution
+\vspace*{.1cm}
+%\subsection{Journal}
+\begin{etaremune}
+	\renewcommand{\labelenumi}{[\theenumi]}
+    \item \textbf{Matheus Farias}, H. T. Kung, ``A Distribution-Based Efficient Programming of Sorted Compute-in-Memory Crossbars'', \textit{em submissão}.
+    \item \textbf{Matheus Farias}, H. T. Kung, ``Sorted Weight Sectioning for Energy-Efficient DNNs on Compute-in-Memory Crossbars'', \textit{em submissão}.
+\end{etaremune}
+\vspace*{-.25cm}
+
+\section{Conferências}
+\vspace*{.1cm}
+\begin{etaremune}
+	\item \textbf{2019 International Conference on Field-Programmable Technology}
+	\hfill{Tianjin, China}
+	\item \textbf{VII Brazilian Symposium on Computing Systems Engineering}
+	\hfill{Curitiba, Brazil}
+	\end{etaremune}
+
+\vspace*{-.25cm}
+\newpage
+\section{Ensino}
+\textbf{\harv}
+\vspace{-0.5em}
+\begin{itemize}[label={}]
+    \setlength\itemsep{0.1em}
+    \item CS205 -- \textit{High Performance Computing} \hfill\textsc{Primavera 2023}
+\end{itemize}
+\vspace*{-.1cm}
+\hspace{1.5em}\textbf{\ufpe} 
+\vspace{-0.5em}
+\begin{itemize}[label={}]
+    \setlength\itemsep{0.1em}
+    \item ES456 -- \textit{Machine Learning} \hfill\textsc{Outono 2020}
+    \item MA326 -- \textit{Complex Variables and Applications} \hfill\textsc{2018--2019}
+    \item FI007 -- \textit{Physics II: Gravitation, Waves and Thermodynamics} \hfill\textsc{2017--2018}
+    \item MA026 -- \textit{Calculus I: Limits, Derivatives and Integrals} \hfill\textsc{Outono 2016} 
+\end{itemize}
+\vspace*{-.25cm}
+\mycomment{
+\entry{Spring 2023}{CS205 -- \textbf{High Performance Computing} -- Teaching Fellow}{\harv}{
+	I led lab activites, held office hours, assisted the teaching staff on grading assignments, and mentored some of the final projects.
+	}
+
+\entry{Fall 2020}{ES456 -- \textbf{Machine Learning} -- Teaching Assistant}{\ufpe}{
+	I conducted my own activities and lectures off of my own syllabus. Supported the students developing projects and graded work.
+	}
+
+\entry{2018--2019}{MA326 -- \textbf{Complex Variables and Applications} -- Teaching Assistant}{\ufpe}{
+	I taught once-a-week sessions to support students in their assignments.
+	}
+
+\entry{2017--2018}{FI007 -- \textbf{Physics II: Gravitation, Waves and Thermodynamics} -- Teaching Assistant}{\ufpe}{
+	I wrote some extra assignments for students interested in Olympic-level Physics, as well as once-a-week sessions to discuss.
+	}
+
+\entry{Fall 2016}{MA026 -- \textbf{Calculus I: Limits, Derivatives and Integrals} -- Teaching Assistant}{\ufpe}{
+	I taught once-a-week sessions to support students in their assignments.
+	}
+}
+
+\section{Trabalho}
+\vspace*{.1cm}
+\we{2020--2021}{\textbf{Neurotech}}{Estagiário de Machine Learning}{
+	Serviu como instrutor em um workshop e colaborou adicionando +5 algoritmos de machine learning para produção.
+	}{Recife, Brazil}
+\we{2016--2018}{\textbf{Espaço Diferencial}}{Co-Fundador e Professor}{
+	Idealizou um cursinho de aulas do básico de engenharia sem fins lucrativos para estudantes carentes. Gerenciou o planejamento estratégico que impactou mais de 200 estudantes com um time de 10 professores. Lecionou física a nível de graduação.
+	}{Recife, Brazil}
+\vspace*{-.25cm}
+\section{Prêmiações e Reconhecimentos}
+\vspace*{.1cm}
+\entry{2023}{\textbf{Medalha de Bronze na Online Young Physicists' Tournament}}{Online}{
+	8º lugar na Online Young Physicists' Tournament 2023.	
+}
+
+\entry{2023}{\textbf{Medalha de Prata na International Young Physicists' Tournament (Copa do Mundo de Física)}}{Murree, Paquistão}{
+	2º lugar na 36ª International Young Physicists' Tournament 2023 no Paquistão.	
+}
+
+\entry{2021-Presente}{\textbf{Bolsista da Fundação Behring}}{Harvard University}{
+	Honrado pela Fundação Behring com bolsa para cobrir estudos em Harvard.
+}
+
+\entry{2019}{\textbf{Silver Award na InnovateFPGA 2019} (\textit{Grande Final})}{Tianjin, China}{
+	2º lugar de 270 times com iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{Silver Award na InnovateFPGA 2019} (\textit{Final Regional})}{Americas}{
+	2º lugar de 40 times com iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{Community Award na InnovateFPGA 2019}}{Americas}{
+	Eleito melhor projeto das américas pela comunidade com iOwlT: Sound Geolocalization System.
+}
+
+\entry{2019}{\textbf{Financiamento PIBIC/CNPq para Pesquisa}}{Brazil}{
+	Premiado pelo governo federal para fazer pesquisa no projeto Lock-in: Amplificador de Sinais a Nível Nano.	
+}
+
+\entry{2017}{\textbf{5º Lugar na XVI Latin American Robotics Competition}}{América Latina}{
+	Na categoria Small Size League de futebol autônomo com Maracatronics: Time de Robótica.
+}
+
+\entry{2017}{\textbf{1º Lugar na Embedded Systems Regional Contest}}{Brazil}{
+	1º lugar de 14 times com iTraffic: Smart Semaphore Network.
+}
+
+\entry{2015}{\textbf{Menção Honrosa na Olimpíada Brasileira de Física}}{Brazil}{
+	Um dos 180 medalhistas entre mais de 300,000 participantes.
+}
+\vspace*{-.25cm}
+%\section{Other Qualifications}
+%\begin{longtable}{rp{12cm}}
+%\textsc{Languages:}&\textbf{Native} Portuguese, \textbf{Advanced} English\\
+%\textsc{Softwares:}&Tensorflow, scikit, OpenCV, Quartus, Matlab, KiCAD, Origin, Adobe Photoshop, Illustrator, \LaTeX\\	
+%\end{longtable}
+
+\mycomment{
+\section{Diversity, Inclusion \& Outreach}
+\begin{itemize}
+    \item Vice President of Brazil Conference 2024
+    \hfill\textsc{2023-2024}
+
+    \item Brazilian Team Leader at the Online Young Physicists' Tournament
+    \hfill\textsc{2023}
+
+	\item Brazilian Team Leader at the International Young Physicists' Tournament in Pakistan
+    \hfill\textsc{2023}
+
+    \item Author of the Experimental Exam for the Brazilian selective to the International Physics Olympiad
+    \hfill\textsc{2023}
+
+    \item Leader of the Diversity \& Inclusion branch at the Harvard Brazilian Association
+	\hfill\textsc{2022--2023}
+
+    \item Judge for the 4th Brazilian Physicists' Tournament
+    \hfill\textsc{2021}
+
+    \item Officer of the School of Engineering at the Harvard Brazilian Association
+	\hfill\textsc{2021--Presente}
+
+    \item Judge for the International Young Physicists' Tournament Brazil
+	\hfill\textsc{2021--2023}
+	\end{itemize}
+\vspace*{-.25cm}
+\section{Talks}
+\entry{2023}{\textbf{Futuras Cientistas -- Ministry of Science, Technology \& Innovation of Brazil} (\href{https://www.youtube.com/watch?v=g5Inc6qXO6k&ab_channel=FuturasCientistas}{link})}{Technology and its Social Impact}{}
+%}
+
+\entry{2022}{\textbf{\ufpe}}{Journey to become a Ph.D student}{
+}
+
+\entry{2021}{\textbf{PodCast Ph.D nos EUA} (\href{https://open.spotify.com/episode/37Rn34gdy7AxNgHeAvdIH0?si=11bf338624d04113}{part 1}) (\href{https://open.spotify.com/episode/7zYdb51lXeKbfpULOgpQlx?si=d1dbd10b9197486e}{part 2})}{Journey to become a Ph.D student}{}
+}
+\end{document}
